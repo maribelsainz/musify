@@ -28,7 +28,8 @@ class PlaylistsController < ApplicationController
 
     respond_to do |format|
       if @playlist.save
-        format.html { redirect_to @playlist, notice: 'Playlist was successfully created.' }
+        #cuando en la ruta se le da el objeto a rails (@playlist), redije por defaul al show del objeto
+        format.html { redirect_to @playlist, notice: 'Playlist fue creado con éxito.' }
         format.json { render :show, status: :created, location: @playlist }
       else
         format.html { render :new }

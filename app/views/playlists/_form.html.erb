@@ -18,7 +18,8 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%# :name--> es lo que muestro, :id--> lo que llega al back (en ese orden) %>
+    <%= form.select :user_id, User.pluck(:name, :id), prompt: "Elija un usuario" %>
   </div>
 
   <div class="actions">
