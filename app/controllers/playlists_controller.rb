@@ -10,6 +10,8 @@ class PlaylistsController < ApplicationController
   # GET /playlists/1
   # GET /playlists/1.json
   def show
+    @song = Song.new
+    @playlist_songs = @playlist.songs #@playlist.songs es ua colección, llama a todas las canciones de esa playlist
   end
 
   # GET /playlists/new
